@@ -26,3 +26,6 @@ Thumbs.db
 
 # Setup scripts temporary
 *.tmp.*
+
+# Claude Code guidance (local only)
+CLAUDE.md
