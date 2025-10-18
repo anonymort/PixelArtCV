@@ -1,7 +1,6 @@
 /* ===== Portfolio CV Stylesheet ===== */
 
-/* Font Import - Retro Pixel Font */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap&font-display=swap');
+/* NOTE: Press Start 2P font is loaded via <link> in HTML head for optimal performance */
 
 /* CSS Reset & Base Styles */
 * {

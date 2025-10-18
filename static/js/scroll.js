@@ -13,7 +13,6 @@ class PortfolioCV {
         this.maxScrollState = 4;
         this.scrollProgress = 0;
         this.scrollTimeout = null;
-        this.isScrolling = false;
 
         // Cache frequently accessed elements
         this.parallax1BgImage = null;
@@ -60,7 +59,8 @@ class PortfolioCV {
 
     onScroll() {
         // Calculate scroll progress (0 to 1)
-        const winScroll = document.documentElement.scrollTop;
+        // Use fallback for Safari/iOS compatibility where documentElement.scrollTop may return 0
+        const winScroll = window.pageYOffset || window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrolled = height > 0 ? (winScroll / height) : 0;
 
@@ -165,6 +165,9 @@ class PortfolioCV {
     }
 
     updateScrollIndicator(scrollProgress, scrollableHeight) {
+        // Guard against missing scroll indicator (e.g., if removed from layout)
+        if (!this.scrollIndicator) return;
+
         // Only show the prompt when the page can actually scroll and we're near the top
         const canScroll = scrollableHeight > 0;
         const nearTop = scrollProgress <= 0.1;
