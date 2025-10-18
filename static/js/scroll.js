@@ -79,14 +79,15 @@ class PortfolioCV {
 
     updateParallax(scrollProgress) {
         // Parallax layer 1: slower movement (background scene)
-        const offset1 = scrollProgress * 50;
+        // Using negative values to move UP as you scroll DOWN (prevents grey gaps)
+        const offset1 = scrollProgress * 30;
         if (this.parallax1) {
-            this.parallax1.style.transform = `translateY(${offset1 * 0.5}px)`;
+            this.parallax1.style.transform = `translateY(-${offset1 * 0.3}px)`;
         }
 
         // Parallax layer 2: slightly faster (floating objects)
         if (this.parallax2) {
-            this.parallax2.style.transform = `translateY(${offset1 * 0.8}px)`;
+            this.parallax2.style.transform = `translateY(-${offset1 * 0.5}px)`;
         }
 
         // Floating items animation based on scroll (lazy load)
@@ -148,11 +149,11 @@ class PortfolioCV {
 
         if (this.parallax2Layer) {
             const ambienceSettings = {
-                'morning': { mode: 'screen', opacity: '0.2' },
-                'afternoon': { mode: 'multiply', opacity: '0.15' },
-                'evening': { mode: 'overlay', opacity: '0.25' },
-                'night': { mode: 'darken', opacity: '0.4' },
-                'deep-night': { mode: 'darken', opacity: '0.5' }
+                'morning': { mode: 'screen', opacity: '0.05' },
+                'afternoon': { mode: 'multiply', opacity: '0.08' },
+                'evening': { mode: 'overlay', opacity: '0.1' },
+                'night': { mode: 'darken', opacity: '0.15' },
+                'deep-night': { mode: 'darken', opacity: '0.2' }
             };
 
             const settings = ambienceSettings[state];
