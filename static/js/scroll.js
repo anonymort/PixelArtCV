@@ -165,14 +165,12 @@ class PortfolioCV {
     }
 
     updateScrollIndicator(scrollProgress) {
-        // Hide scroll indicator when scrolled down
-        if (scrollProgress > 0.1) {
-            this.scrollIndicator.style.opacity = '0';
-            this.scrollIndicator.style.pointerEvents = 'none';
-        } else {
-            this.scrollIndicator.style.opacity = '1';
-            this.scrollIndicator.style.pointerEvents = 'auto';
-        }
+        // Show scroll indicator only at top of page (0-10% scrolled)
+        // Hide when scrolled past 10% OR near bottom (95%+)
+        const isVisible = scrollProgress <= 0.1 && scrollProgress < 0.95;
+
+        this.scrollIndicator.style.opacity = isVisible ? '1' : '0';
+        this.scrollIndicator.style.pointerEvents = isVisible ? 'auto' : 'none';
     }
 }
 
