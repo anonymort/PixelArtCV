@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Pixel Art CV"
 
 [params]
-author = "Matt Kneale"
+author = "Portfolio Owner"
 description = "A beautiful pixel art CV with isometric design"
 
 [outputs]

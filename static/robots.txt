@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /layouts/
+Disallow: /*.backup.*
+Disallow: /*.tmp
+Disallow: /*.bak
+
+Sitemap: https://yourdomain.com/sitemap.xml
