@@ -169,8 +169,14 @@ class PortfolioCV {
         // Hide when scrolled past 10% OR near bottom (95%+)
         const isVisible = scrollProgress <= 0.1 && scrollProgress < 0.95;
 
-        this.scrollIndicator.style.opacity = isVisible ? '1' : '0';
-        this.scrollIndicator.style.pointerEvents = isVisible ? 'auto' : 'none';
+        if (isVisible) {
+            this.scrollIndicator.style.animation = 'fadeInOut 3s ease-in-out infinite';
+            this.scrollIndicator.style.pointerEvents = 'auto';
+        } else {
+            this.scrollIndicator.style.animation = 'none';
+            this.scrollIndicator.style.opacity = '0';
+            this.scrollIndicator.style.pointerEvents = 'none';
+        }
     }
 }
 
