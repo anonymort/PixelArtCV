@@ -298,11 +298,31 @@ p {
     width: 50px;
     height: 50px;
     margin-bottom: 15px;
-    background: rgba(255, 215, 0, 0.2);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     border: 2px solid #ffd700;
     display: flex;
     align-items: center;
     justify-content: center;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+.code-icon {
+    background-image: url('/images/pixel-art/skill-icons/code-icon.png');
+}
+
+.design-icon {
+    background-image: url('/images/pixel-art/skill-icons/design-icon.png');
+}
+
+.tools-icon {
+    background-image: url('/images/pixel-art/skill-icons/tools-icon.png');
+}
+
+.rocket-icon {
+    background-image: url('/images/pixel-art/skill-icons/rocket-icon.png');
 }
 
 .skill-card h3 {
@@ -408,9 +428,30 @@ p {
     justify-content: center;
     width: 24px;
     height: 24px;
-    background: rgba(255, 215, 0, 0.3);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     border: 1px solid #ffd700;
     font-size: 0.6rem;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    color: transparent;  /* Hide text, show image only */
+}
+
+.email-link .link-icon {
+    background-image: url('/images/pixel-art/social-icons/email-icon.png');
+}
+
+.github-link .link-icon {
+    background-image: url('/images/pixel-art/social-icons/github-icon.png');
+}
+
+.twitter-link .link-icon {
+    background-image: url('/images/pixel-art/social-icons/twitter-icon.png');
+}
+
+.linkedin-link .link-icon {
+    background-image: url('/images/pixel-art/social-icons/linkedin-icon.png');
 }
 
 /* Scroll Indicator */
