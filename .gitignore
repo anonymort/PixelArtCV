@@ -1,0 +1,28 @@
+# Hugo
+/public
+/resources
+.hugo_build.lock
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Dependencies
+node_modules
+
+# Backup files
+*.backup.*
+*.tmp
+*.bak
+
+# OS files
+Thumbs.db
+.env
+.env.local
+
+# Setup scripts temporary
+*.tmp.*

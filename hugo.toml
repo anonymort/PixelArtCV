@@ -1,0 +1,13 @@
+baseURL = "http://example.com/"
+languageCode = "en-us"
+title = "Pixel Art CV"
+
+[params]
+author = "Matt Kneale"
+description = "A beautiful pixel art CV with isometric design"
+
+[outputs]
+  home = ["HTML"]
+
+[_merge]
+disableKinds = ["taxonomy", "taxonomyTerm"]
