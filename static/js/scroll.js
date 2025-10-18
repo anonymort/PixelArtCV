@@ -71,7 +71,7 @@ class PortfolioCV {
         this.updateReduxState(scrolled);
 
         // Update scroll indicator visibility
-        this.updateScrollIndicator(scrolled);
+        this.updateScrollIndicator(scrolled, height);
 
         // Store scroll progress
         this.scrollProgress = scrolled;
@@ -164,13 +164,16 @@ class PortfolioCV {
         }
     }
 
-    updateScrollIndicator(scrollProgress) {
-        // Show scroll indicator only at top of page (0-10% scrolled)
-        // Hide when scrolled past 10% OR near bottom (95%+)
-        const isVisible = scrollProgress <= 0.1 && scrollProgress < 0.95;
+    updateScrollIndicator(scrollProgress, scrollableHeight) {
+        // Only show the prompt when the page can actually scroll and we're near the top
+        const canScroll = scrollableHeight > 0;
+        const nearTop = scrollProgress <= 0.1;
+        const nearBottom = scrollProgress >= 0.95;
+        const shouldShow = canScroll && nearTop && !nearBottom;
 
-        if (isVisible) {
+        if (shouldShow) {
             this.scrollIndicator.style.animation = 'fadeInOut 3s ease-in-out infinite';
+            this.scrollIndicator.style.opacity = '';
             this.scrollIndicator.style.pointerEvents = 'auto';
         } else {
             this.scrollIndicator.style.animation = 'none';
