@@ -29,11 +29,13 @@ A beautiful, interactive one-page CV built with Hugo and featuring custom pixel 
 - Reduced motion support for accessibility
 - Touch swipe navigation for mobile devices
 
-⚡ **Performance**
+⚡ **Performance & Security**
 - Optimized pixel art rendering with CSS transforms
 - Smooth 60fps animations using GPU acceleration
 - Minimal JavaScript for fast interactions
 - Static site generation with Hugo
+- Cross-browser scroll compatibility (Safari/iOS safe)
+- Production-ready with security optimizations
 
 ## Project Structure
 
@@ -291,8 +293,10 @@ Each state changes:
 
 - Chrome/Edge 90+
 - Firefox 88+
-- Safari 14+
-- Mobile browsers (iOS Safari, Chrome Mobile)
+- Safari 14+ (including iOS Safari with scroll compatibility fix)
+- Mobile browsers (iOS Safari, Chrome Mobile, Samsung Internet)
+
+**Note**: Recent security updates ensure smooth parallax effects across all platforms including Safari/iOS
 
 ## Performance Notes
 
