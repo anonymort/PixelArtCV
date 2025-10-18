@@ -149,11 +149,11 @@ class PortfolioCV {
 
         if (this.parallax2Layer) {
             const ambienceSettings = {
-                'morning': { mode: 'screen', opacity: '0.05' },
-                'afternoon': { mode: 'multiply', opacity: '0.08' },
-                'evening': { mode: 'overlay', opacity: '0.1' },
-                'night': { mode: 'darken', opacity: '0.15' },
-                'deep-night': { mode: 'darken', opacity: '0.2' }
+                'morning': { mode: 'screen', opacity: '0.1' },
+                'afternoon': { mode: 'multiply', opacity: '0.12' },
+                'evening': { mode: 'overlay', opacity: '0.15' },
+                'night': { mode: 'darken', opacity: '0.25' },
+                'deep-night': { mode: 'darken', opacity: '0.3' }
             };
 
             const settings = ambienceSettings[state];
